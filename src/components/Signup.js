@@ -78,8 +78,10 @@ function Signup() {
           
         </div>
         <br />
-        <div className="button">
-          <button>SIGN UP</button>
+        <div >
+          <button className="button">
+            SIGN UP
+          </button>
         </div>
       </form>
     </div>
