@@ -1,52 +1,89 @@
-import React from "react";
-import "./Signup.css"
-function Signup () {
+import React, { useState } from "react";
+import "./Signup.css";
 
-    function Handlesubmit () {
-        
-    }
+function Signup() {
 
-    return (
-        <div className="form">
-         <form onSubmit = {Handlesubmit}>
-            <label>
-                <hi> SIGN UP </hi>
-            </label>
-            <div className="inputfields">
-                First Name: <br/>
-                <input type="text" placeholder="first name" />
-            </div>
-            <div className="inputfields">
-                Second Name: <br/>
-                <input type="text" placeholder="second name" />
-            </div>
-            <div className="inputfields">
-                Email Address: <br/>
-                <input type="text" placeholder="email" />
-            </div> 
-            <div className="inputfields">
-                Phone Number: <br/>
-                <input type="text" placeholder="number" />
-            </div>
-            <div className="inputfields">
-                Password: <br/>
-                <input type="text" placeholder="password" />
-            </div>
-            <div className="inputfields">
-                Confirmation Password: <br/>
-                <input type="text" placeholder="password" />
-            </div>
-            <div className="button">
-                <button>
-                    SIGN UP
-                </button>
-            </div>
-         </form>
-            
+  const [firstname, setFirstname] = useState("");
+  const [secondname, setSecondname] = useState("");
+  const [email, setEmail] = useState("");
+  const [number, setNumber] = useState("")
+  const [password, setPassword] = useState ("")
+  const [confirmation, setConfirmation] = useState("")
 
 
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
+
+  return (
+    <div className="form">
+      <form onSubmit={handleSubmit}>
+        <label className="signuplabel">
+          <hi> SIGN UP </hi>
+        </label>
+        <div className="inputfields">
+          <p>First Name:</p>
+          <input
+            type="text"
+            placeholder="first name"
+            value={firstname}
+            onChange={(e) => setFirstname(e.target.value)}
+          />
         </div>
-    )
+        <div className="inputfields">
+          <p>Second Name: </p>
+          <input
+            type="text"
+            placeholder="second name"
+            value={secondname}
+            onChange={(e) => setSecondname(e.target.value)}
+          />
+        </div>
+        <div className="inputfields">
+          <p> Email Address: </p>
+          <input
+            type="text"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+        <div className="inputfields">
+          <p>Phone Number: </p>
+          <input 
+          type="text" 
+          placeholder="number" 
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          />
+        </div>
+        <div className="inputfields">
+          <p> Password: </p>
+          <input 
+          type="text" 
+          placeholder="password"
+          value={password} 
+          onChange={(e) => setPassword(e.target.value)}
+          />
+        </div>
+        <div className="inputfields">
+          <p> Confirmation Password: </p>
+          <input 
+          type="text" 
+          placeholder="password" 
+          value={confirmation}
+          onChange={(e) => setConfirmation(e.target.value)}
+          />
+          
+        </div>
+        <br />
+        <div className="button">
+          <button>SIGN UP</button>
+        </div>
+      </form>
+    </div>
+  );
 }
 
 export default Signup;
