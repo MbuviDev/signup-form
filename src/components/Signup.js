@@ -80,7 +80,7 @@ function Signup() {
         <br />
         <div >
           <button className="button">
-            SIGN UP
+               SIGN UP
           </button>
         </div>
       </form>
