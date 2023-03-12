@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "./Signup.css";
+// import "./Signup.css";
+import Explanation from "./Explanation";
 
 function Signup() {
 
@@ -17,14 +18,20 @@ function Signup() {
 
 
   return (
-    <div className="form">
-      <form onSubmit={handleSubmit}>
-        <label className="signuplabel">
-          <hi> SIGN UP </hi>
-        </label>
-        <div className="inputfields">
+    <div>
+        <div>
+    <Explanation/>
+    </div>
+    <div className="flex justify-center text-center font-mono uppercase translate-y-6 " >
+   
+      <form className="shadow-2xl shadow-cyan-500/50" onSubmit={handleSubmit}>
+        <label >
+          <hi className="text-2xl underline "> SIGN UP </hi>
+        </label><br/><br/>
+        <div >
           <p>First Name:</p>
           <input
+           className="rounded-full border-"
             type="text"
             placeholder="first name"
             value={firstname}
@@ -84,7 +91,10 @@ function Signup() {
           </button>
         </div>
       </form>
+     
     </div>
+    </div>
+   
   );
 }
 

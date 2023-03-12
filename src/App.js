@@ -4,7 +4,7 @@ import Signup from './components/Signup';
 
 function App() {
   return (
-    <div className="App">
+    <div className="bg-orange-100 h-screen cursor-pointer  ">
      <Signup />
     </div>
   );
