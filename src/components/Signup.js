@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 // import "./Signup.css";
-import Explanation from "./Explanation";
+
 
 function Signup() {
 
@@ -19,19 +19,17 @@ function Signup() {
 
   return (
     <div>
-        <div>
-    <Explanation/>
-    </div>
-    <div className="flex justify-center text-center font-mono uppercase translate-y-6 " >
+ 
+    <div className=" text-center font-mono uppercase borderb-4 " >
    
-      <form className="shadow-2xl shadow-cyan-500/50" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="shadow-2xl shadow-cyan-500/50 bg-orange-100 shadow-none" >
         <label >
           <hi className="text-2xl underline "> SIGN UP </hi>
         </label><br/><br/>
         <div >
           <p>First Name:</p>
           <input
-           className="rounded-full border-"
+           className="bg-orange-100"
             type="text"
             placeholder="first name"
             value={firstname}
@@ -41,6 +39,7 @@ function Signup() {
         <div className="inputfields">
           <p>Second Name: </p>
           <input
+            className="bg-orange-100"
             type="text"
             placeholder="second name"
             value={secondname}
@@ -50,6 +49,7 @@ function Signup() {
         <div className="inputfields">
           <p> Email Address: </p>
           <input
+            className="bg-orange-100"
             type="text"
             placeholder="email"
             value={email}
@@ -59,6 +59,7 @@ function Signup() {
         <div className="inputfields">
           <p>Phone Number: </p>
           <input 
+          className="bg-orange-100"
           type="text" 
           placeholder="number" 
           value={number}
@@ -69,6 +70,7 @@ function Signup() {
           <p> Password: </p>
           <input 
           type="text" 
+          className="bg-orange-100"
           placeholder="password"
           value={password} 
           onChange={(e) => setPassword(e.target.value)}
@@ -78,6 +80,7 @@ function Signup() {
           <p> Confirmation Password: </p>
           <input 
           type="text" 
+          className="bg-orange-100"
           placeholder="password" 
           value={confirmation}
           onChange={(e) => setConfirmation(e.target.value)}
