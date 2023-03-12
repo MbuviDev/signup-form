@@ -20,9 +20,9 @@ function Signup() {
   return (
     <div>
  
-    <div className=" text-center font-mono uppercase borderb-4 " >
+    <div className="  font-mono uppercase  " >
    
-      <form onSubmit={handleSubmit} className="shadow-2xl shadow-cyan-500/50 bg-orange-100 shadow-none" >
+      <form onSubmit={handleSubmit} className="shadow-2xl shadow-cyan-500/50 bg-orange-100 shadow-none " >
         <label >
           <hi className="text-2xl underline "> SIGN UP </hi>
         </label><br/><br/>
@@ -89,7 +89,7 @@ function Signup() {
         </div>
         <br />
         <div >
-          <button className="button">
+          <button className="bg-blue-300">
                SIGN UP
           </button>
         </div>
